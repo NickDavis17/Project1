@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+//Nick Davis Project 1
 
 public class Main {
     static Scanner input = new Scanner(System.in);
@@ -14,15 +15,17 @@ public class Main {
 
         int choice = input.nextInt();
         //System.out.println(choice);
-        while ((choice == 1) || (choice == 2) || (choice == 3) || (choice == 4) || (choice == 0)) {
+        while ((choice == 1) || (choice == 2) || (choice == 3) || (choice == 4)) {
+            // If the user chooses 1
             if (choice == 1) {
                 add(list);
-
+            // User chooses 2
             } else if (choice == 2) {
                 removeTask(list);
-
+            // 3
             } else if (choice == 3) {
                 updateTask(list);
+            // 4
             } else if (choice == 4) {
                 displayList(list);
             }
@@ -30,10 +33,13 @@ public class Main {
 
             choice = input.nextInt();
         }
+            // 0
             if (choice == 0) {
                 System.out.println("Goodbye");
                 System.exit(0);
-            } else {
+            }
+            //anything else
+                else {
                 menu();
 
                 choice = input.nextInt();
@@ -62,6 +68,7 @@ public class Main {
         a.add(add);
 
     }
+    //removes an item
     static void removeTask(ArrayList a) {
         System.out.println(a);
         System.out.println("Which would you like to remove? (1, 2, 3, 4, Etc...");
@@ -77,7 +84,7 @@ public class Main {
     }
 
 
-
+    //
     static void updateTask(ArrayList a){
         System.out.println(a);
         System.out.println("Which would you like to update? (1, 2, 3, 4, Etc...");
